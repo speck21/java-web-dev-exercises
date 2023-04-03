@@ -35,7 +35,6 @@ public class CountingCharacters {
         }else{
                 countString = choice.replaceAll("[^a-zA-Z]","");
         }
-
         char[] charactersInString = countString.toLowerCase().toCharArray();
         HashMap<Character, Integer> countMap = new HashMap<>();
     /*Loop through character array
@@ -43,17 +42,15 @@ public class CountingCharacters {
       If not, add to hashmap and set value to 1
       If so, increment value
      */
-        for (char i : charactersInString) {
-            if(countMap.containsKey(i)){
-                countMap.put(i, countMap.get(i)+1);
+        for (char letter : charactersInString) {
+            if(countMap.containsKey(letter)){
+                countMap.put(letter, countMap.get(letter)+1);
             }else{
-                countMap.put(i,1);
-
+                countMap.put(letter,1);
             }
         }
         for(Map.Entry<Character, Integer> map:countMap.entrySet()){
             System.out.println(map);
-
         }
     }
 
