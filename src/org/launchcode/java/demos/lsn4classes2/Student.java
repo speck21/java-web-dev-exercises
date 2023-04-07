@@ -47,20 +47,7 @@ public class Student {
     // TODO: Complete the addGrade method.
     public void addGrade(int courseCredits, double grade) {
         // Update the appropriate fields: numberOfCredits, gpa
-        double courseGpa = 0.0;
         double currentQualityScore = 0.0;
-        int newCredit = this.numberOfCredits + courseCredits;
-        if(grade>=90){
-            courseGpa = 4.0;
-        } else if (grade>=80) {
-            courseGpa = 3.0;
-        } else if (grade>=70) {
-            courseGpa = 2.0;
-        } else if (grade>=60) {
-            courseGpa = 1.0;
-        } else if (grade<60) {
-            courseGpa = 0.0;
-        }
         currentQualityScore = this.numberOfCredits * this.gpa;
         currentQualityScore += courseCredits * grade;
         this.numberOfCredits += courseCredits;

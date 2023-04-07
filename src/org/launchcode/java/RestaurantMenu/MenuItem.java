@@ -13,7 +13,6 @@ public class MenuItem {
         this.description = description;
         this.category = category;
         this.isNew = isNew;
-
     }
 
     public String getName() {
@@ -40,5 +39,21 @@ public class MenuItem {
     public void setCategory(String category) {
         this.category = category;
     }
+    public void setNew(boolean isNew){this.isNew = isNew;}
+    public boolean getNew() {return isNew;}
 
+    public boolean equal(MenuItem item){
+        return this.name == item.getName();
+    }
+
+    @Override
+    public String toString() {
+        return "MenuItem{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                ", category='" + category + '\'' +
+                ", isNew=" + isNew +
+                '}';
+    }
 }
